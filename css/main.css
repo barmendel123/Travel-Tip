@@ -1,0 +1,161 @@
+/* Basics */
+
+@font-face {
+    font-family: Dosis;
+    src: url(../fonts/Dosis/Dosis-Medium.ttf);
+}
+
+html {
+    font-family: Dosis;
+
+}
+
+:root {
+    --clr1: #54BAB9;
+    --clr2: #9ED2C6;
+    --clr3: #E9DAC1;
+    --clr4: #F7ECDE;
+}
+
+body {
+    background-color: var(--clr4);
+    margin: 0;
+}
+
+.main-layout {
+    max-width: 1100px;
+}
+
+.btn {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: rgb(255, 255, 255);
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+/* Header */
+
+.main-header {
+    background-color: var(--clr1);
+    min-height: 120px;
+    display: flex;
+    justify-content: center;
+}
+
+.main-header .main-layout {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    align-items: center;
+}
+
+.main-header .main-layout h1 {
+    font-size: 3.2em;
+    color: #be7636;
+    margin-inline-end: auto;
+}
+
+.main-header .main-layout .input-search {
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    height: 40px;
+}
+
+.main-header .main-layout .btn-search,
+.main-header .main-layout .btn-user-pos {
+    background-color: var(--clr2);
+    font-size: 1.1em;
+}
+
+.main-header .main-layout .btn-user-pos {
+    background-color: #be7636;
+    margin-inline-start: 15px;
+}
+
+.main-header .main-layout .btn-search:hover {
+    background-color: #9ed2c6c1;
+}
+
+/* Main Content */
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+.main-content .main-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.main-content .main-layout aside {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    gap: 15px;
+}
+
+.main-content .map-container {
+    flex-basis: 50%;
+}
+
+.main-content .weather-container {
+    background-color: #be7636;
+    height: 200px;
+    flex-basis: 50%;
+    order: 5;
+    background-color: var(--clr2);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.main-content .weather-container h1 {
+    margin: 0;
+    margin-top: 15px;
+}
+
+.main-content .weather-container p {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.main-content .locs-table {
+    background-color: var(--clr3);
+    border-radius: 20px;
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2em;
+}
+
+
+.main-content .locs-table thead {
+    font-weight: 600; 
+    margin-bottom: 8px;
+}
+
+.main-content .locs-table tr {
+    text-align: center;
+}
+
+.main-content .locs-table .btn-delete {
+    background-color: rgb(200, 82, 82);
+}
+
+.main-content .locs-table .btn-go {
+    background-color: var(--clr2);
+}
+
+.main-content .locs-table .btn-copy {
+    background-color: rgb(235, 191, 49);
+}
